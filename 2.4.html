@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.4</title>
+</head>
+<body>
+  <script>
+    function theDate() {
+  const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+  const year = new Date().getFullYear();
+  const dayOfWeek = weekDays[new Date().getDay()];
+  const day = new Date().getDate();
+  const month = months[new Date().getMonth()];
+  return `Today is ${dayOfWeek} the ${day} of ${month} ${year}`;
+    }
+
+    console.log(theDate());
+
+  </script>
+</body>
+</html>
