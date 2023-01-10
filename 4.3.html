@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4.3</title>
+</head>
+<body>
+  <script>
+    function avgScore (game1, game2, game3) {
+      return (game1+game2+game3)/3
+    }
+
+    let John = avgScore(89, 120, 103);
+    let Mike = avgScore(116, 94, 123);
+    let Mary = avgScore(97, 134, 105);
+
+    if (John > Mike && John > Mary) {
+      console.log("The winner on average is John's team with an average score of " + John);
+    } else if (Mike > John && Mike > Mary) {
+      console.log("The winner on average is Mike's team with an average score of " + Mike);
+    } else if (Mary > John && Mary > Mike) {
+      console.log("The winner on average is Mary's team with an average score of " + Mary);
+    } else {
+      console.log("It might be draw between two or three teams");
+    }
+  </script>
+</body>
+</html>

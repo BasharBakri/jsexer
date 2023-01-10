@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4.4</title>
+</head>
+<body>
+  <script>
+    function boom(n) {
+      for (let i = 1; i <= n; i++) {
+                if (i % 7 === 0) {
+                    if (i.toString().includes("7")) {
+                        console.log("BOOM-BOOM");
+                    } 
+                    else {
+                        console.log("BOOM");
+                    }
+                }
+                 else {
+                    console.log(i);
+                }
+            }
+        }
+        console.log(boom(77));
+  </script>
+</body>
+</html>

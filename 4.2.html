@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 4.2 </title>
+</head>
+<body>
+  <script>
+    function score(amount) 
+    {
+      if(0 <= amount && amount <= 64){
+      return console.log('F')
+    } else if (65 <= amount && amount <= 69)
+    {return console.log('D')}
+      else if (70 <= amount && amount <= 79)
+    {return console.log('C')}
+      else if (80 <= amount && amount <= 89)
+    {return console.log('B')}
+      else if (90 <= amount && amount <= 100)
+    {return console.log('A')}
+      else {
+        return console.log('Invalid');
+    }
+    }
+    console.log(score(85));
+  </script>
+</body>
+</html>

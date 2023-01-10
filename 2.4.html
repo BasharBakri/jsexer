@@ -9,14 +9,14 @@
 <body>
   <script>
     function theDate() {
-  const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-  const year = new Date().getFullYear();
-  const dayOfWeek = weekDays[new Date().getDay()];
-  const day = new Date().getDate();
-  const month = months[new Date().getMonth()];
-  return `Today is ${dayOfWeek} the ${day} of ${month} ${year}`;
+      const year = new Date().getFullYear();
+      const dayOfWeek = weekDays[new Date().getDay()];
+      const day = new Date().getDate();
+      const month = months[new Date().getMonth()];
+      return `Today is ${dayOfWeek} the ${day} of ${month} ${year}`;
     }
 
     console.log(theDate());
