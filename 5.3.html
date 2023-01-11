@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5.3</title>
+</head>
+<body>
+  <script>
+    function password(input) {
+      if (typeof input !== "string") 
+       {
+        return console.log('write a string between the paranthesis');
+       }
+       return input.length > 7 ? console.log('Stronk pass') : console.log('Weak pass');
+    }
+
+    const password2 = input => {
+      typeof input !== 'string' ? console.log('put string') : ''
+      if (input.length >= 7) {
+        const regex = /[A-Z]/;
+        if (regex.test(input)) {
+            return "Mamash Stronk";
+        } else {
+            return " just Strong";
+        }
+    } else {
+        return " weak sauce";
+    }
+}
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5.4</title>
+</head>
+<body>
+  <script>
+    function lightDark (color) {
+      if(typeof color !== 'string') {
+        return console.log('write a string in the parameter');
+      }
+        color = color.toLowerCase();
+
+        switch(color) {
+          case 'yellow':
+          case 'pink':
+          case 'orange':
+            console.log('This is a light color');
+            break;
+          case 'blue':
+          case 'purple':
+          case 'brown':
+          console.log('This is a dark color');
+            break;
+          default:
+            console.log('Unkown color');
+        }
+    }
+  </script>
+</body>
+</html>
