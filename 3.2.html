@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3.2</title>
+</head>
+<body>
+  <script>
+    /*
+JavaScript - Declaring Functions
+The following exercise contains the following
+subjects:
+* functions
+Instructions
+* Please reformat the following function
+expressions to IIFE functions.
+* Please reformat the following function
+declarations in two ways, explicit return and implicit
+return functions.
+Submit the file to Hive
+*/
+
+// From function declarations to explicit and implicit
+//return functions (one of each).
+
+
+// function welcome() {
+// let welcome = 'Welcome to Appleseeds Bootcamp!';
+// return welcome;
+// }
+
+const welcome1 = () => 'Welcome to Appleseeds Bootcamp!';
+const welcome2 = () => { 
+  return 'Welcome to Appleseeds Bootcamp!' };
+
+function power(a) {
+let myNumber = a;
+let result = Math.pow(myNumber, 2);
+return result;
+}
+
+const power1 = a => Math.pow(a, 2);
+const power2 = a => {
+  return Math.pow(a, 2);
+}
+
+
+// From function expressions to IIFE functions.
+
+const squareRoot = a => Math.sqrt(a);
+
+(function(a){
+return Math.sqrt(a);
+})(16);
+
+const randomNumbers = (a, b) => Math.random() * (a - b) +
+b;
+
+(function(a,b) {
+  return Math.random() * (a - b) +
+b;
+})(1,10)
+
+
+  </script>
+</body>
+</html>

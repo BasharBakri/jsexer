@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5.1</title>
+</head>
+<body>
+  <script>
+    function countryToLiveIn(language, isIsland, population,country) {
+      language.toLocaleLowerCase();
+      let popCheck = Number.isInteger(population); 
+      if (!popCheck) {
+        return console.log('write a numba in the 3rd slot');
+      }
+      if (typeof language !== "string" || typeof country !== "string" ) 
+       {
+        return console.log('write a string in the 1st and last slot');
+      }
+      if (typeof isIsland !== "boolean") 
+       {
+        return console.log('write true or false in the 2nd slot');
+      }
+      if(language === 'english' && isIsland === false && population < 50) {
+        return console.log('Yo Sarah live here')
+      } else {
+        return console.log('Sarah this ain\'t for you')
+      }
+    }
+  </script>
+</body>
+</html>
