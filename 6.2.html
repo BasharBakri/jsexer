@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6.2</title>
+</head>
+<body>
+  <script>
+    const people = ["Greg", "Mary", "Devon", "James"];
+
+    //1
+    for (let i = 0; i < people.length; i++) {
+    console.log(people[i]);
+    }
+    //2
+    people.shift();
+    //3
+    people.pop();
+    //4
+    people.unshift('Matt');
+    //5
+    people.push('Bashar')
+    //6
+    for (let i = 0; i < people.length-2; i++) {
+    console.log(people[i]);
+    }
+    //7
+    const newPeople = people.slice(2, 4);
+    console.log(newPeople);
+    //8
+    console.log(people.indexOf('Mary'));
+    //9
+    console.log(people.indexOf('Foo'));
+    //10 
+    people.unshift('Greg');
+    people.splice(1,1);
+    people.splice(2,4,"Elizabeth", "Artie");
+    people.push('James');
+    //11
+    const withBob = people.concat("Bob");
+    console.log(withBob);
+
+    
+    console.log(people);
+  </script>
+</body>
+</html>

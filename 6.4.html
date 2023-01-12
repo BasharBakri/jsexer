@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6.4</title>
+</head>
+<body>
+  <script>
+    populations = [9, 18, 123, 1000];
+
+    function populationPercentages (populations) {
+      let percentages = []
+      for (let i = 0; i < populations.length; i++) {
+        percentages.push((populations[i]/7900) * 100);
+      }
+      return percentages;
+    }
+  </script>
+</body>
+</html>
