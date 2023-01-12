@@ -10,12 +10,43 @@
   <script>
     //1 
 
-    let filledArray = new Array(100).fill({'value' : 'key'});
+    let filledArray = new Array(100).fill({'key' : 'value'});
 
     console.log(filledArray.length);
-    const arr = Array.from({length: 100}, (_, i) => i + 1);
-    console.log(arr);
     console.log(filledArray);
+
+    //2
+    const arr = Array.from({length: 100}, (_, i) => i + 1);
+
+    console.log(arr);
+  
+    //3 
+    const obj = { a: 1, b: 2, c: 3 };
+    const arrValues = [...Object.values(obj)];
+    console.log(arrValues);
+    
+    //4
+
+    const obj2 = Object.assign({}, arrValues);
+    console.log(obj2);
+
+    //5
+
+    console.log(Array.isArray(arr));
+
+    //6 
+    const originalArr = [1, 2, 3];
+    const copy = originalArr.slice();
+    console.log(copy);
+    
+    //6
+
+    const originalArr2 = [1,2,3,];
+    const copy2 = originalArr2;
+    copy2.push(4,5,6);
+    console.log(copy2);
+    console.log(originalArr2);
+    
   </script>
 </body>
 </html>
