@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7.1</title>
+</head>
+<body>
+  <script>
+    const arr = [3,4,4,3,6,3];
+
+    function noDup (arr) {
+    if(!Array.isArray(arr)){
+        return console.log('Insert Array')
+    }
+    return arr.filter((i, x) => arr.indexOf(i) === x);
+    }
+    
+    console.log(noDup(arr));
+  </script>
+</body>
+</html>
