@@ -9,9 +9,22 @@
 <body>
   <script>
     const array = ["Hello", "Good Day", "Your Welcome", "hotdog", "hamburgers"];
-
+"".toLowerCase
     function counter (arr) {
+      const letters = {};
+     for(i in arr) {
+      arr[i]=arr[i].toLowerCase();
+      for(j in arr[i]){
+        if (letters[arr[i][j]] == undefined){
+          letters[arr[i][j]]=1;
+        }else{
+          letters[arr[i][j]]= letters[arr[i][j]]+1;
+        }
       }
+     }
+     return letters;
+    }
+
     console.log(counter(array));
   </script>
 </body>
