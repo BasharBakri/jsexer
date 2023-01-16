@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9.2</title>
+</head>
+<body>
+  <script>
+
+    const arr = ["boo", "dooiiioo", "hoo","ro"];
+
+    function long(arr){
+      lengthArr = [];
+      for(let i = 0; i < arr.length;i++){
+        lengthArr.push(arr[i].length)
+      } return lengthArr;
+    }
+
+
+    function length(arr) {
+      let lengthArr = [];
+      let i = 0;
+      while(i < arr.length){
+      lengthArr.push(arr[i].length);
+      i++;
+      }
+      return lengthArr;
+    }
+    console.log(long(arr));
+    console.log(length(arr));
+  
+    //While loop isn't the best for this exercise, since we know how many times we want to iterate through the for loop and the for loop sytanx is easier.
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9.3</title>
+</head>
+<body>
+  <script>
+    const food = ["Noodle", "Pasta", "Ice-cream", "Meat", "Cucumber", "Olives"];
+    const food1 = ["Fries", "Ice-cream", "Pizza", "Olives", "Hamburgers"];
+
+    function getMatch(a, b) {
+    let matches = [];
+
+    for ( let i = 0; i < a.length; i++ ) {
+        for ( let j = 0; j < b.length; j++ ) {
+            if ( a[i].includes(b[j]) )
+            { matches.push( a[i] )};
+        }
+    
+    } if (matches.length=== 0) {return false} else {return matches};
+}
+
+console.log(getMatch(food,food1));
+
+  </script>
+</body>
+</html>
