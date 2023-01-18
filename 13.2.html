@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>13.2</title>
+</head>
+<body>
+  <script>
+    const foods = ["falafel", "sabich", "hummus", "pizza with extra pineapple"];
+    //a.1
+    console.log(foods.sort().reverse());
+    //a.2
+    console.log(foods.sort());
+    //b1
+    const foodsWithUpperCase = ["falafel", "Sabich", "hummus", "pizza with extra pineapple"];
+    const desc = foodsWithUpperCase.sort(function(a,b){return b.localeCompare(a)}).slice();
+    //b2
+    const asc = foodsWithUpperCase.sort(function(a,b){return a.localeCompare(b)});
+
+    //c1
+    const words = ["apple","supercalifragilisticexpialidocious","hi", "zoo"];
+    const byLongest = words.sort(function(a,b){return b.length - a.length});
+
+          // console.log(foodsWithUpperCase.sort());
+
+  </script>
+</body>
+</html>
