@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10.1</title>
+</head>
+<body>
+  <script>
+    //1
+
+    function stringCheck(x){
+       if(typeof(x) === 'string'){
+        console.log(x);
+        return true
+      } else {return false}
+    }
+
+    function isString(func,value){
+      return stringCheck(value);
+    }
+    //2 
+    const dashed = function  (y){
+      return y.split(" ").join("-");
+    }
+    function firstWordUpperCase (func, sentenceString){
+      let words = sentenceString.split(" ");
+      words[0] = words[0].toUpperCase();
+      let words2 = words.join(' ');
+      return(func(words2));
+    }
+    console.log(firstWordUpperCase (dashed, 'This random String'));
+    
+    //3 I don't really understand the wording or the request here
+    console.log(firstWordUpperCase(stringCheck,'ahhh'));
+
+    //4 
+    function lessThanTen(x){
+      return x<10;
+    }
+
+    function mine(func, x){
+      if(func(x)){
+        return 'I hate this exercise';
+      } else{return 'I still hate this exercise'};
+    }
+
+
+  </script>
+</body>
+</html>
