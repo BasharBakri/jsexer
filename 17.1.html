@@ -18,24 +18,39 @@ return otherFunction;
 }
 var firstResult = someFunction(9);
 var result = firstResult(2);
-// console.log(result);
-// firstResult will return 9, here is my thought process: b is defined globally so otherFunction has access to it.
-// so someFunction now becomes a function factory, because of closures the value of b is seperate each time we want
-// to run the c
+
+//  I did see the code eventually and I was very wrong. I took a long time understanding closures more 
+// firstResult, will return otherFunction since it's equal to someFunction(); the parameter 9 doesn't matter at all 
+// in this case, we have no reference to number anywhere else or to the parameter. 
+// result will return otherfunction(); which is the value of b. It will be 5. 
+// Why 5? Because otherFunction will look for the value of b, firstly inside of itself, it won't find it.
+// so it goes to its parent scope, which is someFunction. There the value of b is 5, so it takes it and 
+// closures on it, so preserves it. Now it will keep value of b=5; even if the function is ran outside in the global variable and the global decleration is ignored.
 
 
-// var a = 1;
-// function b2() {
-// a = 10;
-// return;
-// function a() { }
-// }
-// b2();
-// // console.log(a);
-// Before running the code. console.log(a) will log 10. Why? because we executed the function b2() 
-// which sets the value of a = 10 and then stops because we wrote return, so we can ignore function a.
+var a = 1;
+function b2() {
+a = 10;
+return;
+function a() { }
+}
+b2();
+console.log(a);
 
-//After running the code I was wrong. I don't understand why function a changes the value of a back to 1
+// I also did run this code eventually. Everything about closures leads me to think console log (a) will return 10;
+// It shoudln't return one. I am trying to think why it did return one, my best guess since we ran a function declared
+// as a it reassigned the value after the return to the global scope again so it became a=1 
+
+let i;
+for (i = 0; i < 3; i++) {
+const log = () => {
+console.log(i);
+}
+setTimeout(log, 100);
+}
+// setTimeout delays the running of the code by 100 ms, in that time before JS executes the code,
+// it needs to put the function and the variable value in it in a closure. The final value of i should be 3 
+// because this is when the loop ends.
   </script>
 </body>
 </html>
