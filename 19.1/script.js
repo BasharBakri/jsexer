@@ -1,5 +1,6 @@
 
 const startHere = document.getElementsByClassName("start-here");
+// const startHere = document.querySelector('.start-here');
 
 startHere[0].innerText  = 'main title';
 

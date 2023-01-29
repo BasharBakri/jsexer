@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>21.2</title>
+</head>
+<body>
+  <p> Change the font size using + or -</p>
+  <button id="-">-</button>
+  <button id="+">+</button>
+  <script>
+    const btnMinus = document.getElementById('-');
+    const btnPlus = document.getElementById('+');
+    const p = document.querySelector('p');
+    let fontSize = parseInt(getComputedStyle(p).fontSize);
+
+
+
+    btnMinus.addEventListener('click', () =>
+    { fontSize = fontSize -2;
+      fontSize = fontSize < 6 ? 6 : fontSize;
+      p.style.fontSize = fontSize +'px'});
+    btnPlus.addEventListener('click', () =>
+    { fontSize = fontSize +2;
+      fontSize = fontSize > 100 ? 100 : fontSize;
+      p.style.fontSize = fontSize +'px'});
+
+  </script>
+</body>
+</html>
