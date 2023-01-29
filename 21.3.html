@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>21.3</title>
+</head>
+<body>
+<form action="#">
+  <h5>Why are you interested in this position?</h5>
+  <textarea name="" id="" cols="30" rows="10"></textarea>
+  <br>
+  <button type="submit">Submit</button> <span></span>
+</form>
+<script>
+  
+  const textArea = document.querySelector('textarea');
+  const btn = document.querySelector('button');
+  const span = document.querySelector('span');
+
+  btn.disabled = true;
+  span.textContent = 'Please enter at least 100 characters';
+
+  textArea.addEventListener('input', function() {
+  if (textArea.value.length < 100) {
+    btn.disabled = true;
+    span.textContent = 'Please enter at least 100 characters';
+  } else {
+    btn.disabled = false;
+    span.textContent = '';
+  }
+});
+
+  
+</script>
+</body>
+</html>
