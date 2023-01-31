@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplication Table</title>
+</head>
+<body>
+  <table id="table"></table>
+
+
+
+
+  <script>
+    //  I need to multiply each num by itself and by the next unit, and for each result to be added to the array
+
+    let output = '';
+    
+    const nums = [1,2,3,4,5,6,7,8,9];
+
+    const multArr2 = [];
+
+    for(let i = 1; i < 10; i++){
+    const multArr = nums.map((e) => {
+      return  i*e;
+        });
+
+
+        console.log('inside loops',multArr)
+        //  document.getElementById('table').innerHTML = `<td> ${multArr} </td>`
+         multArr2.push(multArr)
+        };
+        const multArr3 = multArr2.flat(Infinity);
+
+        for (let j of multArr3){
+          output = output + '<td>'+j+'</td>';
+          document.querySelector('table').innerHTML = output;
+        };
+        </script>
+</body>
+</html>
