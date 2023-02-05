@@ -25,17 +25,21 @@
     const multArr = nums.map((e) => {
       return  i*e;
         });
-
-
-        console.log('inside loops',multArr)
         //  document.getElementById('table').innerHTML = `<td> ${multArr} </td>`
          multArr2.push(multArr)
         };
         const multArr3 = multArr2.flat(Infinity);
+        let newArray = multArr3.slice(0,10);
+
 
         for (let j of multArr3){
+          if(multArr3[j] < multArr3[8]){
+            output = output + '<tr>' +j+ '</tr>'
+            document.querySelector('table').innerHTML = output;
+          } else {
           output = output + '<td>'+j+'</td>';
           document.querySelector('table').innerHTML = output;
+        }
         };
         </script>
 </body>
