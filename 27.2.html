@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>27.2</title>
+</head>
+
+<body>
+  <script>
+
+    // I don't understand why the rejected promise is logged before the succesful one
+    
+    let strArr = ['ssdsad', 'adgvcx'];
+    let notAllstrArr = ['cafdfga',1,'bafdk'];
+
+
+    const checkifstrArr = (strArr) => {
+      return new Promise((resolve, reject) => {
+        if (strArr.every(element => typeof element === 'string')) {
+          resolve(strArr);
+        } else if (!strArr.every(element => typeof element === 'string')) {
+          reject();
+        };
+      });
+    };
+
+    const makeAllCaps = (strArr) => {
+      return new Promise((resolve, reject) => {
+        resolve(strArr.map((str) => str.toUpperCase()));
+      });
+    };
+
+    const sortWords = function (strArr) {
+      return new Promise((resolve, reject) => {
+        resolve(strArr.sort());
+      });
+    };
+    checkifstrArr(strArr)
+      .then(makeAllCaps)
+      .then(sortWords)
+      .then((strArr)=>console.log(strArr))
+      .catch(() => console.log('error'));
+
+
+    checkifstrArr(notAllstrArr)
+      .then(makeAllCaps)
+      .then(sortWords)
+      .then((notAllstrArr) => console.log(notAllstrArr))
+      .catch(() => console.log('error'));
+
+  </script>
+</body>
+
+</html>
