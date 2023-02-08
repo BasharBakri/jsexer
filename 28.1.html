@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>28.1</title>
+</head>
+
+<body>
+  <button>Get Joke</button>
+  <h3></h3>
+  <script>
+    const firstReq = new XMLHttpRequest();
+    const btn = document.querySelector('button');
+    const h3 = document.querySelector('h3');
+
+    btn.addEventListener('click', () => {
+      console.log(firstReq);
+      const data = JSON.parse(firstReq.responseText);
+      console.log(data);
+      const joke = data.contents.jokes[0].joke;
+      console.log(joke);
+      h3.innerHTML = `${joke.title} <br> <br> ${joke.text}`
+    });
+
+    firstReq.open("GET", 'https://api.jokes.one/jod');
+    firstReq.send();
+  </script>
+</body>
+
+</html>
